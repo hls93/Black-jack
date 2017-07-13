@@ -5,13 +5,18 @@
    to watch the assertions pass as you write your code.
 
    Also remember, that the parameter `hand` will be an array, so
-   you'll need to parse through that first before you can start to 
+   you'll need to parse through that first before you can start to
    write your logic.
 */
 
 
 function handValue (hand) {
-
+  let value = 0;
+  for (var i = 0; i < hand.length; i++) {
+    if (hand[i] === "J" || hand[i] === "Q" || hand[i] === "k"){
+      total += 10
+    }
+  }
 
   return;
 }

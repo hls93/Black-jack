@@ -11,15 +11,29 @@
 
 
 function handValue (hand) {
-  let value = 0;
-  for (var i = 0; i < hand.length; i++) {
-    if (hand[i] === "J" || hand[i] === "Q" || hand[i] === "k"){
-      total += 10
-    }
-  }
-
-  return;
+//declaring starting variable "total"
+let total = 0
+//Now we need to parse through all the different possible values
+ for (var i = 0; i < hand.length; i++) {
+//The number options are 1-10, so these are the only options i'm giving
+     if (hand[i] === "2" || hand[i] === "3" || hand[i] === "4" || hand[i] === "5" || hand[i] === "6" || hand[i] === "7" || hand[i] === "8" || hand[i] === "9" || hand[i] === "10"); {
+//parseInt will parse through a string and return an integer
+     total += parseInt(hand[i]);
+   } else if (hand[i] == "J" || hand[i] == "Q" || hand[i] == "K") {
+     total += 10;
+   }
 }
+ for (i = 0; i < hand.length; i++) {
+     if (hand[i] == "A" && total < 11) {
+     total += 11;          total
+   } else if (hand[i] == "A" && total > 11) {
+     total += 1;
+   }
+}
+ return total;
+}
+
+
 
 
 /* -----  Hints ------
